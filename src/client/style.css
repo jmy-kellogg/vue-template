@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+  h3 {
+    font-size: var(--text-lg);
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-ruby-50: oklch(95% 0.194 16.67);     /* very light tint */
+  --color-ruby-100: oklch(90% 0.194 16.67);
+  --color-ruby-200: oklch(80% 0.194 16.67);
+  --color-ruby-300: oklch(70% 0.194 16.67);
+  --color-ruby-400: oklch(60% 0.194 16.67);
+  --color-ruby-500: oklch(50% 0.194 16.67);    /* #b50938 base */
+  --color-ruby-600: oklch(40% 0.194 16.67);
+  --color-ruby-700: oklch(30% 0.194 16.67);
+  --color-ruby-800: oklch(20% 0.194 16.67);
+  --color-ruby-900: oklch(10% 0.194 16.67);
+  --color-ruby-950: oklch(5% 0.194 16.67);    /* very deep */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
